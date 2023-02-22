@@ -5,4 +5,5 @@ COPY . /app
 WORKDIR /app
 RUN pip3 install Cython
 RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python"]
+RUN python3 setup.py install
+ENTRYPOINT ["osc2mqtt"]
